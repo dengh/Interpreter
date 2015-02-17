@@ -1,0 +1,20 @@
+fun reverseacc(a,b) = if length(a)>0 then reverseacc(tl(a),cons(hd(a),b)) else b;
+fun reverse(a) = reverseacc(a,[]);
+fun append(a,b) = reverseacc(reverse(a),b);
+fun increment(a) = if length(a)>0 then cons(hd(a)+1,increment(tl(a))) else [];
+fun splitacc(a,b) = if length(b)<length(a) then splitacc(tl(a),cons(hd(a),b)) else cons(a,cons(b,[]));
+fun split(a) = splitacc(a,[]);
+fun merge(a,b) = if length(a)>0 then 
+    	       	    if length(b)>0 then
+		       if hd(a) < hd(b) then
+		       	  cons(hd(a),merge(tl(a),b)) 
+		       else
+			  cons(hd(b),merge(a,tl(b)))
+		    else
+		       a
+		 else
+		    b;
+fun mergesortacc(a,b) = merge(mergesort(a),mergesort(b));
+fun mergesortcarry(a) = mergesortacc(hd(a),hd(tl(a)));
+fun mergesort(a) = if length(a)<2 then a else mergesortcarry(split(a));
+fun createalist(x) = if x>0 then cons(x,createalist(x-1)) else [];

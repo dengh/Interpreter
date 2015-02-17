@@ -1,0 +1,25 @@
+/*! \mainpage Index
+ *
+ * \section intro_sec Introduction
+ *
+ * This is the documentation for some of the classes and functions in the ./src folder
+ *
+ * \section make_sec Make targets
+ * 
+ * Usefull make targets are:
+ *
+ * \subsection all_sec make all 
+ * Compiles a standard runtime version of the executable, that can then be found in the ./build folder
+ * 
+ * \subsection run_sec make run
+ * Compiles and runs the program, see make all
+ * 
+ * \subsection debugmode_sec make debugmode
+ * Compiles and runs the program in debug mode, with the standard output being the debug outstream of choice, see make run
+ *
+ * \subsection test_sec make test
+ * Compiles and runs the program on a couple of previously-defined tests, see make run
+ *
+ * \section mclass_sec Main classes
+ * The main class files are the structures.h, structures.c, interpreter.c and parser.y files. All of these are documented within except parser.y as it does not work well with doxygen.
+ */

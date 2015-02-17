@@ -1,0 +1,2 @@
+fun sumlist(x) = if length(x) then hd(x) + sumlist(tl(x)) else 0;
+sumlist([1,2,3,4,5]) = 1+2+3+4+5;

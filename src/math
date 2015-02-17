@@ -1,0 +1,4 @@
+fun fibonacc(countto, count, i1, i2) = if count=countto then i2 else fibonacc(countto, count+1, i2, i1+i2);
+fun fibon(x) = fibonacc(x,0,0,1);
+fun fac(x) = if x=0 then 1 else x*fac(x-1);
+file ./tests/list_suite;
